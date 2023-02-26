@@ -6,4 +6,4 @@ function fukompo() {
 }
 
 
-export default fukompo();
+export default fukompo;
