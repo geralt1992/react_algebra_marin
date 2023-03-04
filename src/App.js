@@ -1,51 +1,38 @@
 import './App.css';
 import React from 'react';
-import {UserChildren , UserFunction, UserClass } from './Components';
+import { UserFunction } from './Components';
 
 class App extends React.Component {
 
   state = {
-    users : [
-        {name: 'iva', age : 25},
-        {name: 'marin', age : 33},
-        {name: 'nina', age : 53},
-    ]
+    user :  {name: 'marin', age : 33},
   }
 
-  handleClick = () => {
-    const { users } = this.state;
 
-      const newUsers = users.map((user) => {
-        return { name: user.name, 
-                 age: user.age +1 
-                }
-      })
+//FORA ZA PRENJETI DATA IZ CHILDA U PARENT
+//ZA UPDEJTANJE STEJTA
 
-      //SA SPRED OPERATOROM
-      //rastavlja objekt na sastavne dijelove, sve se prepisuje, kao i ovo gorei znad
-      //uvijek spred "..." ide prvi
-      const newUsersSaSpredom = users.map((user) => {
-        return { ...user, age: user.age +1 }
-      })
+//stejt nikad ne diras, moras ga rekreirati!
 
-      this.setState({ users : newUsers })
+  handleNameChange = (event) => {
+    let value = event.target.value;
+
+    //dobor je dikonsturktat jer dodjeliš "const" objektima i poljima, koji trebaju const inace uz sebe jer su nepromijenjivi
+    const { user } = this.state;
+
+    const newUser =  { ...user, name : value};
+
+    this.setState({user : newUser});
   }
-
 
 
  render() {
+  const { user } = this.state;
 
-  const { users } = this.state;
-
-
-  return
-    <div>
-      <button onClick={this.handleClick} >Click me</button>
-      <UserChildren> Moje ime je {users[2].name} i imam {this.users[2].age} godina </UserChildren>
-      <UserFunction user={users[1]}/>
-      <UserClass user={users[2]}/>
-    </div>
+  return <div> 
+    <UserFunction user={user} handleNameChange={this.handleNameChange}/> 
   
+  </div>
   
  }
  
