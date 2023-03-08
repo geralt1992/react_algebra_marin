@@ -5,10 +5,12 @@ function Component4() {
 
     const contextObject = React.useContext(Context);
 
+    const {text ,  number} = contextObject;
+
 
     return <div>
         <h2>Komponenta 4 - consumer</h2>
-        <p>{contextObject.text} - dobiveno iz konteksta, a broj je {contextObject.number}</p>
+        <p>{text} - dobiveno iz konteksta, a broj je {number}</p>
     
     </div>
 }
