@@ -1,9 +1,10 @@
 import './App.css';
+import Counter from './features/coutner/Counter'
 
 function App() {
   return (
-    <div>
-      
+    <div> 
+      <Counter />
     </div>
   );
 }
