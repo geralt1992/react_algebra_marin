@@ -18,10 +18,16 @@ export const counterSlice = createSlice({
 
         reset: (state) => {
             state.value = 0;
-        } 
+        },
+
+        //ZA DODAVANJE VRIJEDNOSTI OD KORISNIKA NPR, TAJ PAYLOAD
+        incramentByAmount: (state, action) => {
+            state.value += action.payload;
+        }
+
 
     }
 })
-export const { decrement , incrament, reset} = counterSlice.actions;
+export const { decrement , incrament, reset, incramentByAmount} = counterSlice.actions;
 
 export default counterSlice.reducer;

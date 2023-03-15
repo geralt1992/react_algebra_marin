@@ -1,5 +1,5 @@
 import styles from './Counter.module.css'
-import { decrement , incrament, reset} from '../coutner/counterSlice'
+import { decrement , incrament, reset, incramentByAmount} from '../coutner/counterSlice'
 import { useDispatch, useSelector } from 'react-redux';
 
 function Counter() {
@@ -12,7 +12,8 @@ function Counter() {
     }
 
     function addOne() {
-        dispatch(incrament());
+        // dispatch(incrament());
+        dispatch(incramentByAmount(4))
     }
 
     function resetCounter() {
