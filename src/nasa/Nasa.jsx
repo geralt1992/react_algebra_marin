@@ -17,7 +17,7 @@ function Nasa() {
       dispatch(setData(data));
     }) 
 
-  }, []);
+  }, [dispatch]);
 
 
 
