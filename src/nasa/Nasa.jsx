@@ -21,7 +21,6 @@ function Nasa() {
 
 
 
-
   if(!data) {
     return 'Loding NASA data...';
   }
