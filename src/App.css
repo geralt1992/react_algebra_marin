@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .mainDiv {
+    height: 100vh;
+    background-color: #f4f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .nav button {
+    padding: .5rem;
+  }
+  
+  .nav a {
+    text-decoration: 'none';
+    color: 'black'
+  }
+  
+  .nav a button:focus {
+    color: white !important;
+    background-color: black;
+  }
+  
+  .inputField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  
+  .inputField input {
+    padding: .5rem;
+    border: .5px black solid;
+  }
+  
+  .inputField input:focus {
+    border: 1px white solid;
+  }
+  
+  .inputField .addBtn {
+    background-color: white;
+    padding: .5rem;
+  }
+  
+  .tasks {
+    background-color: white;
+    width: 11.9%;
+  }
+  
+  .tasks .oneTask {
+    padding: 2rem , 2rem;
+  }
+  
+  .tasks .oneTask input {
+    margin-right: 1rem;;
+  }
+  
+  .clearCompleted {
+    float: right;
+    cursor: pointer;
+  }
+  
